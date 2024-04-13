@@ -39,11 +39,14 @@ Seguidamente "cp" copia un archivo o directorio hacia una ubicación y allí per
 Por ultimo "man" muestra la página de manual del comando que especifiques, ayudando con las opciones adicionales para un uso avanzado. Cada comando mencionado tiene opciones disponibles adicionales para modificar su comportamiento predeterminado. Ejemplo:
 
 ## Conexíon de ROS con Matlab
-* Con Linux se lanzó 2 terminales. En la primera terminal se escribio el comando roscore para iniciar el modo maestro.
-* En la segunda terminal escribió rosrun turtlesim turtlesim node
-* Se lanzó  una instancia de Matlab en Linux.
-* Se creo un script con el siguiente código:
-* Se Ejecutó las tres secciones del script y se observaró los resultados con la pose de la tortuga.
+* Con Linux se lanzó 2 terminales. En la primera terminal se escribio el comando `roscore` para iniciar el modo maestro mientras que en la segunda terminal se escribió `rosrun turtlesim turtlesim node`.
+  
+* Una vez dentro de la instancia de Matlab en Linux, se creo un script con el siguiente código:
+  
+* Ejecutando las tres secciones del script, fue posible observar los resultados en cuanto a la pose de la tortuga.
+  
+* Despues, se creo un script adicional en Matlab que permitia suscribirse al tópico de pose de la simulación usando el comando `rossubscriber` junto con otro script donde es posible enviar todos los valores asociados a la pose de turtle1.
+  
 * Finalmente en cuanto a como finalizar un nodo maestro (master node) en MATLAB, estando dentro de Ubuntu con ROS, se debe utilizar el siguiente comando en la terminal:
 ```bash
 rosnode kill /rosout
