@@ -24,4 +24,4 @@ Por Juan David Alonso, Julián Pinzón y Rodrigo Vera
 
 "man" muestra la página de manual del comando que especifiques, revelando opciones adicionales para un uso avanzado. Cada comando mencionado puede hacer mucho más de lo que has aprendido hasta ahora, y la mayoría tiene opciones disponibles para modificar su comportamiento predeterminado. Por ejemplo, al ingresar "man ls" aprenderás sobre opciones útiles como "ls -al", que lista no solo nombres de archivos y directorios, sino también metadatos útiles sobre cada uno. Ejemplo de uso: Si deseas aprender más sobre el comando "ls", puedes escribir "man ls" y se mostrará la página de manual con información detallada sobre cómo usar el comando "ls" y sus diferentes opciones.
 
-##Conexíon de ROS con Matlab
+## Conexíon de ROS con Matlab
