@@ -29,3 +29,5 @@ Por Juan David Alonso, Julián Pinzón y Rodrigo Vera
 * En la segunda terminal escribió rosrun turtlesim turtlesim node
 * Se lanzó  una instancia de Matlab en Linux.
 * Se creo un script con el siguiente código:
+* Se Ejecutó las tres secciones del script y se observaró los resultados con la pose de la tortuga.
+
