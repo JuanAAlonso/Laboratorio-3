@@ -34,14 +34,21 @@ Y de manera analoga el siguiente comando "rmdir" sirve para eliminar un director
 Por ultimo "man" muestra la página de manual del comando que se especifique a continuación, ayudando con las opciones adicionales para un uso avanzado. Cada comando mencionado tiene opciones disponibles adicionales para modificar su comportamiento predeterminado como por ejemplo en al imagen anterior se ve al ejecutar "man ls".
 
 ## Conexíon de ROS con Matlab
+
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://github.com/JuanAAlonso/Laboratorio-3/blob/main/Tortuga.JPG)
+
+
 * Con Linux se lanzó 2 terminales. En la primera terminal se escribio el comando `roscore` para iniciar el modo maestro mientras que en la segunda terminal se escribió `rosrun turtlesim turtlesim node`.
+
+  ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.]((https://github.com/JuanAAlonso/Laboratorio-3/blob/main/Terminales.JPG))
   
 * Una vez dentro de la instancia de Matlab en Linux, se creo un script con el siguiente código:
+
+    ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://github.com/JuanAAlonso/Laboratorio-3/blob/main/Matlab.JPG)
   
-* Ejecutando las tres secciones del script, fue posible observar los resultados en cuanto a la pose de la tortuga.
+* Ejecutando las tres secciones del script, fue posible observar los resultados en cuanto a la pose de la tortuga donde se creo un script adicional  que permitia suscribirse al tópico de pose de la simulación usando el comando `rossubscriber` junto con otro script donde es posible enviar todos los valores asociados a la pose de turtle1.
   
-* Despues, se creo un script adicional en Matlab que permitia suscribirse al tópico de pose de la simulación usando el comando `rossubscriber` junto con otro script donde es posible enviar todos los valores asociados a la pose de turtle1.
-  
+ ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://github.com/JuanAAlonso/Laboratorio-3/blob/main/Command.JPG) 
 * Finalmente en cuanto a como finalizar un nodo maestro (master node) en MATLAB, estando dentro de Ubuntu con ROS, se debe utilizar el siguiente comando en la terminal:
 ```bash
 rosnode kill /rosout
