@@ -35,6 +35,8 @@ Por ultimo "man" muestra la página de manual del comando que se especifique a c
 
 ## Conexíon de ROS con Matlab
 
+TurtleSim es una herramienta de simulación que permite controlar una tortuga virtual en un entorno bidimensional. Esto permite desarrollar y probar algoritmos de control y planificación de trayectorias en un entorno simulado antes de implementarlos en robots físicos, todo ello a través de la interfaz de MATLAB para interactuar con el sistema ROS.
+
 ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://github.com/JuanAAlonso/Laboratorio-3/blob/main/Tortuga.JPG)
 
 
