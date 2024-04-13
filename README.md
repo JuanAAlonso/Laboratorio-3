@@ -40,7 +40,7 @@ Por ultimo "man" muestra la página de manual del comando que se especifique a c
 
 * Con Linux se lanzó 2 terminales. En la primera terminal se escribio el comando `roscore` para iniciar el modo maestro mientras que en la segunda terminal se escribió `rosrun turtlesim turtlesim node`.
 
-  ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.]((https://github.com/JuanAAlonso/Laboratorio-3/blob/main/Terminales.JPG))
+  ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://github.com/JuanAAlonso/Laboratorio-3/blob/main/Terminales.JPG)
   
 * Una vez dentro de la instancia de Matlab en Linux, se creo un script con el siguiente código:
 
