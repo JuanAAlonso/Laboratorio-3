@@ -44,4 +44,8 @@ Por ultimo "man" muestra la página de manual del comando que especifiques, ayud
 * Se lanzó  una instancia de Matlab en Linux.
 * Se creo un script con el siguiente código:
 * Se Ejecutó las tres secciones del script y se observaró los resultados con la pose de la tortuga.
+* Finalmente en cuanto a como finalizar un nodo maestro (master node) en MATLAB, estando dentro de Ubuntu con ROS, se debe utilizar el siguiente comando en la terminal:
+```bash
+rosnode kill /rosout
+```
 
