@@ -44,7 +44,7 @@ Por ultimo "man" muestra la página de manual del comando que se especifique a c
   
 * Una vez dentro de la instancia de Matlab en Linux, se creo un script con el siguiente código:
 
-    ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://github.com/JuanAAlonso/Laboratorio-3/blob/main/Matlab.JPG)
+    ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://github.com/JuanAAlonso/Laboratorio-3/blob/main/CodMatlab.JPG)
   
 * Ejecutando las tres secciones del script, fue posible observar los resultados en cuanto a la pose de la tortuga donde se creo un script adicional  que permitia suscribirse al tópico de pose de la simulación usando el comando `rossubscriber` junto con otro script donde es posible enviar todos los valores asociados a la pose de turtle1.
   
