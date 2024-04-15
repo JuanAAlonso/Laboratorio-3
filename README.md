@@ -57,3 +57,97 @@ rosnode kill /rosout
 ```
 
 ## Utilizando Python
+Para la conexión de ROS con Python se realiza un código en esté mismo lenguaje. Se inicializa con el código dado por el docente: 
+
+```bash
+import rospy  
+from geometry_msgs.msg import Twist
+from turtlesim.srv import TeleportAbsolute, Teleport Relative
+import termios, sys, os
+from numpy import pi
+```
+Aqui se encuentra la libreria rospy, para comunicarse con ROS desde python; Twist, para enviarle comando a turtlesim; sys y os para el uso y manejo del teclado; y por último, Teleport Absoluta para el comando de teletransporte.
+
+Para poder leer el teclado se realiza la siguiente función:
+```bash
+def get_key():
+    fd = sys.stdin.fileno()
+    old = termios.tcgetattr(fd)
+    new = termios.tcgetattr(fd)
+    new[3] = new[3] & ~TERMIOS.ICANON & ~TERMIOS.ECHO
+    new[6][TERMIOS.VMIN] = 1
+    new[6][TERMIOS.VTIME] = 0
+    termios.tcsetattr(fd,TERMIOS.TCSANOW,new)
+    c = None
+    try:
+        key = os.read(fd,1)
+    finally:
+        termios.tcsetattr(fd,TERMIOS.TCSAFLUSH,old)
+    return key
+```
+
+Ahora, se inicializa el nodo y se usa el objeto Publisher más Twist para poder enviar el dato y poder cambiar la velocidad de la tortuga:
+
+```bash
+rospy.init_node('my_turtle',anonymous=True) 
+vel_pub = rospy.Publisher('/turtle1/cmd_vel', Twist,queue_size=10)
+vel_msg = Twist()
+```
+Usando un bucle infinito se revisa las presiones del teclado y realizar su función correspondiente:
+
+```bash
+while True:
+    key = get_key() 
+    key = key.decode('utf-8',errors='replace')  
+```
+
+Usando un "try" se revisa que tecla se presionó para hacer la función correspóndiente y se publica:
+
+```bash
+try:  
+    if key.lower() == 'w':
+        vel_msg.linear.x = 1
+        vel_msg.angular.z = 0
+
+        elif key.lower() == 'a':
+        vel_msg.angular.z = pi/4
+        vel_msg.linear.x = 0
+        ang += pi/4
+
+    elif key.lower() == 'd':
+        vel_msg.angular.z = -pi/4
+        vel_msg.linear.x = 0
+        ang -= pi/4
+
+    elif key.lower() == 's':     
+        vel_msg.linear.x = -1
+        vel_msg.angular.z = 0
+
+    elif key.lower() == 'q':   
+        break
+
+    elif key.lower() == ' ':
+        turtle_teleport = rospy.ServiceProxy('turtle1/teleport_absolute',TeleportAbsolute)
+        turtle_teleport(5.5,5.5,0)
+
+
+    elif key.lower() == 'r':
+        vel_msg.linear.x = 0       
+        vel_msg.angular.z = pi
+```
+
+Y por último se tiene el código principal de este script:
+
+if __name__ == '__main__':
+    try:
+        rotate()
+    except ROSInterruptException:
+        pass     
+
+Esto da como resultado el movimiento de la tortuga gracias a la conexión con ROS:
+
+  ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://github.com/JuanAAlonso/Laboratorio-3/blob/main/Python.jpg)
+
+## Conclusiones
+
+Existen diferentes formas de conexión con ROS lo que demuestra un programa robusto y flexible. Además de ser de un nivel suficientemente alto para una fácil conexión y uso.
