@@ -138,11 +138,13 @@ try:
 
 Y por último se tiene el código principal de este script:
 
+```bash
 if __name__ == '__main__':
     try:
         rotate()
     except ROSInterruptException:
-        pass     
+        pass  
+```
 
 Esto da como resultado el movimiento de la tortuga gracias a la conexión con ROS:
 
